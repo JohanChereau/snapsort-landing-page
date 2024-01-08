@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --clr-text-50: hsl(252, 92%, 95%);
+  --clr-text-100: hsl(250, 92%, 90%);
+  --clr-text-200: hsl(251, 92%, 80%);
+  --clr-text-300: hsl(251, 93%, 70%);
+  --clr-text-400: hsl(251, 93%, 60%);
+  --clr-text-500: hsl(251, 93%, 50%);
+  --clr-text-600: hsl(251, 93%, 40%);
+  --clr-text-700: hsl(251, 93%, 30%);
+  --clr-text-800: hsl(251, 92%, 20%);
+  --clr-text-900: hsl(250, 92%, 10%);
+  --clr-text-950: hsl(250, 92%, 5%);
+  --clr-background-50: hsl(254, 100%, 95%);
+  --clr-background-100: hsl(254, 100%, 90%);
+  --clr-background-200: hsl(254, 100%, 80%);
+  --clr-background-300: hsl(254, 100%, 70%);
+  --clr-background-400: hsl(254, 100%, 60%);
+  --clr-background-500: hsl(254, 100%, 50%);
+  --clr-background-600: hsl(254, 100%, 40%);
+  --clr-background-700: hsl(254, 100%, 30%);
+  --clr-background-800: hsl(254, 100%, 20%);
+  --clr-background-900: hsl(254, 100%, 10%);
+  --clr-background-950: hsl(254, 100%, 5%);
+  --clr-primary-50: hsl(250, 92%, 95%);
+  --clr-primary-100: hsl(251, 92%, 90%);
+  --clr-primary-200: hsl(252, 92%, 80%);
+  --clr-primary-300: hsl(252, 92%, 70%);
+  --clr-primary-400: hsl(252, 92%, 60%);
+  --clr-primary-500: hsl(252, 92%, 50%);
+  --clr-primary-600: hsl(252, 92%, 40%);
+  --clr-primary-700: hsl(252, 92%, 30%);
+  --clr-primary-800: hsl(252, 92%, 20%);
+  --clr-primary-900: hsl(251, 92%, 10%);
+  --clr-primary-950: hsl(253, 92%, 5%);
+  --clr-secondary-50: hsl(323, 92%, 95%);
+  --clr-secondary-100: hsl(324, 92%, 90%);
+  --clr-secondary-200: hsl(324, 92%, 80%);
+  --clr-secondary-300: hsl(324, 93%, 70%);
+  --clr-secondary-400: hsl(324, 93%, 60%);
+  --clr-secondary-500: hsl(324, 93%, 50%);
+  --clr-secondary-600: hsl(324, 93%, 40%);
+  --clr-secondary-700: hsl(324, 93%, 30%);
+  --clr-secondary-800: hsl(324, 92%, 20%);
+  --clr-secondary-900: hsl(324, 92%, 10%);
+  --clr-secondary-950: hsl(325, 92%, 5%);
+  --clr-accent-50: hsl(350, 92%, 95%);
+  --clr-accent-100: hsl(350, 92%, 90%);
+  --clr-accent-200: hsl(350, 92%, 80%);
+  --clr-accent-300: hsl(350, 93%, 70%);
+  --clr-accent-400: hsl(350, 93%, 60%);
+  --clr-accent-500: hsl(350, 93%, 50%);
+  --clr-accent-600: hsl(350, 93%, 40%);
+  --clr-accent-700: hsl(350, 93%, 30%);
+  --clr-accent-800: hsl(350, 92%, 20%);
+  --clr-accent-900: hsl(350, 92%, 10%);
+  --clr-accent-950: hsl(350, 92%, 5%);
+  --linearPrimarySecondary: linear-gradient(
+    hsl(252, 92%, 74%),
+    hsl(324, 93%, 35%)
+  );
+  --linearPrimaryAccent: linear-gradient(
+    hsl(252, 92%, 74%),
+    hsl(350, 93%, 55%)
+  );
+  --linearSecondaryAccent: linear-gradient(
+    hsl(324, 93%, 35%),
+    hsl(350, 93%, 55%)
+  );
+  --radialPrimarySecondary: radial-gradient(
+    hsl(252, 92%, 74%),
+    hsl(324, 93%, 35%)
+  );
+  --radialPrimaryAccent: radial-gradient(
+    hsl(252, 92%, 74%),
+    hsl(350, 93%, 55%)
+  );
+  --radialSecondaryAccent: radial-gradient(
+    hsl(324, 93%, 35%),
+    hsl(350, 93%, 55%)
+  );
+  --ff-default: "Nunito", sans-serif;
+  --ff-accent: "Roboto", sans-serif;
+  --fw-bold: 700;
+  --fw-regular: 400;
+  --fw-light: 300;
+  --fs-900: 4.5rem;
+  --fs-800: 1.9rem;
+  --fs-600: 1.5rem;
+  --fs-400: 1.1rem;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100svh;
+  font-family: var(--ff-default);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  color: var(--clr-text-50);
+  background-color: var(--clr-background-950);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+}
+
+/*# sourceMappingURL=style.css.map */

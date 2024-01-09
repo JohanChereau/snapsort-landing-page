@@ -71,6 +71,7 @@
     hsl(324, 93%, 35%)
   );
   --linearPrimaryAccent: linear-gradient(
+    to right,
     hsl(252, 92%, 74%),
     hsl(350, 93%, 55%)
   );
@@ -107,29 +108,211 @@
 //Global styling
 img,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 body {
-    min-height: 100svh;
+  min-height: 100svh;
 
-    font-family: var(--ff-default);
-    font-size: var(--fs-400);
-    font-weight: var(--fw-regular);
-    color: var(--clr-text-50);
-    background-color: var(--clr-background-950);
+  font-family: var(--ff-default);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  color: var(--clr-text-50);
+  background-color: var(--clr-background-950);
+
+  text-rendering: optimizeSpeed;
 }
 
 h1,
 h2,
 h3 {
-    font-family: var(--ff-accent);
-    font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
 }
 
 //Utility classes
 //Layout
+.container {
+  --max-width: 1210px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+.flex.space-between {
+  justify-content: space-between;
+}
 
 //Styling
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.p-gradient-text {
+  background: var(--linearPrimaryAccent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+//Header
+.header {
+  padding: 0.8rem 0;
+}
+
+.header__wrapper {
+  gap: 2rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.logo__img {
+  width: 2.8em;
+}
+
+.logo__text {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-800);
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  gap: clamp(0.8rem, 5vw, 2rem);
+
+  padding: 0;
+  font-family: var(--ff-accent);
+  list-style-type: none;
+}
+
+.nav__list a,
+.header__cta-btn {
+  display: block;
+  width: max-content;
+
+  text-decoration: none;
+  color: var(--clr-text-50);
+}
+
+.nav__list a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-inline: auto;
+  background: var(--linearPrimaryAccent);
+  transition:  all .2s ease-in-out;
+}
+
+.nav__list a:is(:hover, :focus)::after {
+  width: 100%;
+}
+
+.header__cta-btn {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  border: 1px solid var(--clr-text-50);
+}
+
+@media (max-width: 52em) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    inset: 0 0 0 40%;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+    z-index: 9000;
+
+    padding: min(16vh, 8rem) 2em;
+    background-color: rgba(0, 0, 0, 1);
+    
+  }
+
+  @supports (backdrop-filter: blur(5px)) {
+    .nav {
+      background-color: rgba(0, 0, 0, .6);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  .nav[data-visible] {
+    transform: translateX(0);
+  }
+
+  .nav__list {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .mobile-nav-toggle {
+    --hamburger-color: var(--clr-text-50);
+
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1.2rem;
+    overflow: hidden;
+    z-index: 9999;
+
+    background: transparent;
+    border: none;
+  }
+
+  .mobile-nav-toggle .mobile-nav-toggle__hamburger {
+    transition: translate 1s, rotate 1s;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-toggle__hamburger {
+    translate: 13px -10px;
+    rotate: .125turn;
+  }
+
+  .mobile-nav-toggle .line {
+    stroke-dasharray: 60 31 60 300;
+    transition: 1s;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+  }
+
+  .header__cta-btn {
+    display: none;
+  }
+}
+
 

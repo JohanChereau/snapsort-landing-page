@@ -39,26 +39,215 @@
             aria-expanded="false"
           >
             <span class="sr-only">Menu</span>
-            <svg stroke="var(--hamburger-color)" fill="none" class="mobile-nav-toggle__hamburger" viewBox="-10 -10 120 120" width="50">
-              <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-              </path>
+            <svg
+              stroke="var(--hamburger-color)"
+              fill="none"
+              class="mobile-nav-toggle__hamburger"
+              viewBox="-10 -10 120 120"
+              width="50"
+            >
+              <path
+                class="line"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+              ></path>
             </svg>
-
           </button>
 
           <nav class="nav" id="primary-navigation">
             <ul class="nav__list" aria-label="primary" role="list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Open source</a></li>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#open-source">Open source</a></li>
               <li><a href="#">Documentation</a></li>
             </ul>
           </nav>
 
-          <a href="#" class="header__cta-btn">Download</a>
-
+          <a
+            href="#download"
+            class="button header__cta-btn"
+            data-type="white-border"
+            >Download</a
+          >
         </div>
       </div>
     </header>
+
+    <main>
+      <section class="hero-section" id="hero">
+        <div class="container text-center">
+          <h1 class="hero-section__title">
+            Discover <span class="p-gradient-text">Snapsort,</span> <br />your
+            sorting ally
+          </h1>
+          <p class="hero-section__subtitle">
+            Open-source desktop utility application for sorting, analyzing and
+            organizing your files in folders sorted by year and month.
+          </p>
+          <div class="hero-section__buttons flex flex-center">
+            <a href="#" class="button" data-type="primary">Download</a>
+            <a href="#" class="button" data-type="secondary">Visit GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section" id="features">
+        <div class="container features-wrapper">
+          <h2 class="section__title">Features</h2>
+          <ul class="features__list">
+            <li class="feature">
+              <img
+                src="./assets/icons/sort.svg"
+                alt="Sorting icon"
+                class="feature__icon"
+              />
+              <div class="feature__text">
+                <h3 class="feature__title">Sorting</h3>
+                <p class="feature__description">
+                  Select a folder and your files will be copied and sorted into
+                  folders according to year and month.
+                </p>
+              </div>
+            </li>
+            <li class="feature">
+              <img
+                src="./assets/icons/scan.svg"
+                alt="Scanning icon"
+                class="feature__icon"
+              />
+              <div class="feature__text">
+                <h3 class="feature__title">Analyzing</h3>
+                <p class="feature__description">
+                  Scan a folder to make sure all files are correctly sorted in
+                  your folders.
+                </p>
+              </div>
+            </li>
+            <li class="feature">
+              <img
+                src="./assets/icons/file.svg"
+                alt="File icon"
+                class="feature__icon"
+              />
+              <div class="feature__text">
+                <h3 class="feature__title">File extensions</h3>
+                <p class="feature__description">
+                  Select the file extensions to be taken into account when
+                  sorting.
+                </p>
+              </div>
+            </li>
+            <li class="feature">
+              <img
+                src="./assets/icons/calendar.svg"
+                alt="Calendar icon"
+                class="feature__icon"
+              />
+              <div class="feature__text">
+                <h3 class="feature__title">Custom months</h3>
+                <p class="feature__description">
+                  Personalize the names of your months according to your needs
+                  and desires.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="open-source-section" id="open-source">
+        <div class="container text-center">
+          <img
+            src="./assets/icons/github.svg"
+            alt="Github icon"
+            class="section__icon"
+          />
+          <h2 class="section__title">Open source</h2>
+          <p class="section__subtitle">
+            The application's source code is available for free on GitHub.
+          </p>
+          <a href="#" class="button" data-type="primary">Visit GitHub</a>
+        </div>
+      </section>
+
+      <section class="download-section" id="download">
+        <div class="container text-center">
+          <img
+            src="./assets/icons/desktop.svg"
+            alt="Desktop icon"
+            class="section__icon"
+          />
+          <h2 class="section__title">Download for free</h2>
+          <p class="section__subtitle">
+            The application's source code is available for free on GitHub.
+          </p>
+          <button class="button" data-type="dark">
+            <img
+              class="button__icon"
+              src="./assets/icons/windows.svg"
+              alt="Windows icon"
+            />
+            <span class="button__text">Download</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+
+        <h2 class="section__title flex flex-center">
+          <a href="#" class="logo">
+            <img
+              src="assets/icons/snapsort-logo.png"
+              alt="Snapsort logo"
+              class="logo__img"
+            />
+            <span class="logo__text p-gradient-text">Snapsort</span>
+          </a>
+        </h2>
+
+        <ul class="footer__sections">
+          <li class="footer__section">
+            <h3 class="footer__section-name">Snapsort</h3>
+            <ul class="footer__section-list">
+              <li class="footer__section-item"><a href="#hero">Home</a></li>
+              <li class="footer__section-item"><a href="#features">Features</a></li>
+              <li class="footer__section-item"><a href="#open-source">GitHub</a></li>
+              <li class="footer__section-item"><a href="#download">Download</a></li>
+            </ul>
+          </li>
+          <li class="footer__section">
+            <h3 class="footer__section-name">Author</h3>
+            <ul class="footer__section-list">
+              <li class="footer__section-item"><a href="#">Portfolio</a></li>
+              <li class="footer__section-item"><a href="#">LinkedIn</a></li>
+              <li class="footer__section-item"><a href="#">Solutions</a></li>
+              <li class="footer__section-item"><a href="#">GitHub</a></li>
+            </ul>
+          </li>
+          <li class="footer__section">
+            <h3 class="footer__section-name">Legal</h3>
+            <ul class="footer__section-list">
+              <li class="footer__section-item"><a href="#">Terms and conditions of use</a></li>
+              <li class="footer__section-item"><a href="#">Privacy policy</a></li>
+              <li class="footer__section-item"><a href="#">Cookies</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <hr class="separator" />
+
+        <p class="footer__copyright">Copyright © 2024 Johan Chereau</p>
+        <ul class="social__list">
+          <li class="social__item"><img class="social__icon" src="./assets/icons/website.svg" alt="Website icon"></li>
+          <li class="social__item"><img class="social__icon" src="./assets/icons/github.svg" alt="icon"></li>
+          <li class="social__item"><img class="social__icon" src="./assets/icons/linkedin.svg" alt="icon"></li>
+        </ul>
+      </div>
+
+    </footer>
   </body>
 </html>

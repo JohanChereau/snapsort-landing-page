@@ -225,6 +225,11 @@ ol {
   -webkit-text-fill-color: transparent;
 }
 
+.bg-dark {
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(31, 31, 31);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -275,7 +280,12 @@ ol {
 }
 
 .header {
-  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 8000;
+  transition: background 0.3s ease;
+  padding: 0.5rem 0;
 }
 
 .header__wrapper {
@@ -360,8 +370,8 @@ ol {
     --hamburger-color: var(--clr-text-50);
     display: block;
     position: fixed;
-    top: 1rem;
-    right: 1.2rem;
+    top: 0.5rem;
+    right: 0.8rem;
     overflow: hidden;
     z-index: 9999;
     background: transparent;

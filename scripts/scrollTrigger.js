@@ -1,3 +1,4 @@
+const header = document.querySelector('header');
 gsap.registerPlugin(ScrollTrigger);
 
 //Header
@@ -9,6 +10,14 @@ gsap.fromTo('header',
     opacity: 1,
     duration: 2,
 });
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > header.offsetHeight) {
+        header.classList.add('bg-dark');
+    } else {
+        header.classList.remove('bg-dark');
+    }
+})
 
 // Hero section
 gsap.fromTo('.hero-section__title', 

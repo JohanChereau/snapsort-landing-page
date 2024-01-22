@@ -1,5 +1,3 @@
-![Snapsort logo](./assets/icons/snapsort-icon.ico)
-
 # Snapsort Landing page: Desktop utility application for sorting
 
 ## Introduction
@@ -20,8 +18,10 @@ Welcome to the Snapsort landing page. Snapsort is a small and simple open source
 - Live view of the website : [Click here]()
 
 ## Social
-- **Portfolio** : myPortfolioHere
-- **LinkedIn** : myLinkedInHere
+
+- **Portfolio** : [View portfolio](https://johan-chereau.com)
+- **Blog** : [View blog](https://blog.johan-chereau.com)
+- **LinkedIn** : [View LinkedIn profile](https://fr.linkedin.com/in/johan-chereau)
 
 ## Screenshots
 

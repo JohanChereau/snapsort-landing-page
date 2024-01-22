@@ -381,7 +381,7 @@ ol {
     transition: translate 1s, rotate 1s;
   }
   .mobile-nav-toggle[aria-expanded=true] .mobile-nav-toggle__hamburger {
-    translate: 13px -10px;
+    translate: 5% -5%;
     rotate: 0.125turn;
   }
   .mobile-nav-toggle .line {

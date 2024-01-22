@@ -99,8 +99,8 @@
     hsl(350, 93%, 55%)
   );
 
-  --ff-default: 'Nunito', sans-serif;
-  --ff-accent: 'Roboto', sans-serif;
+  --ff-default: "Nunito", sans-serif;
+  --ff-accent: "Roboto", sans-serif;
 
   --fw-bold: 700;
   --fw-regular: 400;
@@ -267,24 +267,24 @@ ol {
   transform: translate(0, -3px);
 }
 
-.button[data-type='primary'] {
+.button[data-type="primary"] {
   background-color: var(--clr-primary-300);
   color: var(--clr-text-950);
 }
 
-.button[data-type='primary']:is(:hover, :focus) {
+.button[data-type="primary"]:is(:hover, :focus) {
   box-shadow: 0 20px 80px -10px var(--clr-primary-300);
 }
 
-.button[data-type='secondary'] {
+.button[data-type="secondary"] {
   background-color: var(--clr-secondary-700);
 }
 
-.button[data-type='dark'] {
+.button[data-type="dark"] {
   background-color: hsl(0, 0%, 0%);
 }
 
-.button[data-type='white-border'] {
+.button[data-type="white-border"] {
   border: 1px solid var(--clr-text-50);
 }
 
@@ -303,7 +303,7 @@ ol {
   top: 0;
   left: 0;
   z-index: 8000;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
   padding: 0.5rem 0;
 }
 
@@ -348,7 +348,7 @@ ol {
 }
 
 .nav__list a::after {
-  content: '';
+  content: "";
   display: block;
   width: 0%;
   height: 2px;
@@ -398,8 +398,8 @@ ol {
 
     display: block;
     position: fixed;
-    top: .5rem;
-    right: .8rem;
+    top: 0.5rem;
+    right: 0.8rem;
     overflow: hidden;
     z-index: 9999;
 
@@ -411,8 +411,8 @@ ol {
     transition: translate 1s, rotate 1s;
   }
 
-  .mobile-nav-toggle[aria-expanded='true'] .mobile-nav-toggle__hamburger {
-    translate: 13px -10px;
+  .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-toggle__hamburger {
+    translate: 5% -5%;
     rotate: 0.125turn;
   }
 
@@ -421,7 +421,7 @@ ol {
     transition: 1s;
   }
 
-  .mobile-nav-toggle[aria-expanded='true'] .line {
+  .mobile-nav-toggle[aria-expanded="true"] .line {
     stroke-dasharray: 60 105 60 300;
     stroke-dashoffset: -90;
   }
@@ -475,11 +475,11 @@ ol {
 @supports (backdrop-filter: blur(8px)) {
   .features-wrapper {
     background: rgba(136, 108, 249, 0.04);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
-border: 1px solid rgba(136, 108, 249, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(136, 108, 249, 0.18);
   }
 }
 

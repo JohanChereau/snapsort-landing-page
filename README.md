@@ -15,7 +15,7 @@ Welcome to the Snapsort landing page. Snapsort is a small and simple open source
 
 ## Links
 
-- Live view of the website : [Click here]()
+- Live view of the website : [Click here](https://snapsort.johan-chereau.com)
 
 ## Social
 
